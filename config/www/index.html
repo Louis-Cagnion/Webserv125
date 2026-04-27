@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webserv Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+      align-items: center;      
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      animation: float 2s ease-in-out infinite alternate;
+      margin-bottom: 30px;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: white;
+      color: #0072ff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s ease;
+      margin: 20px;
+    }
+
+    a.button:hover {
+      background: #e8f2ff;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Webserv 🎉</h1>
+
+  <!-- Upload page boutton -->
+  <a href="upload.html" class="button">Upload a file</a>
+
+  <!-- Delete page button -->
+  <a href="delete_file.html" class="button">Delete a file</a>
+
+  <!-- Autoindex boutton -->
+  <a href="/autoindex/" class="button">Go to autoindex</a>
+
+  <!--CGI gestion button-->
+  <a href="/cgi-bin/" class="button">CGI Scripts</a>
+  </body>
+</html>
